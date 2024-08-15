@@ -3,6 +3,10 @@ from dash import Dash, dcc, html, Output, Input, State
 import dash_bootstrap_components as dbc
 
 app = dash.Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.SPACELAB])
+
+# server
+server = app.server
+
 sidebar = dbc.Nav(
             [
                 dbc.NavLink(
@@ -18,7 +22,7 @@ sidebar = dbc.Nav(
             pills=True,
             className="bg-light",
 )
-server = app.server
+
 
 app.layout= dbc.Container([
     dbc.Row([
