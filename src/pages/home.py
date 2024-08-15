@@ -226,7 +226,7 @@ def show_player_stats_from_plot(hoverData):
     dfs = dfs.sort_values('season')
 
     return dash_table.DataTable(data=dfs.to_dict('records'),
-                columns=[{'id': c, 'name': c} for c in dfs.columns]
+                columns=[{'id': c, 'name': c} for c in dfs.columns],
                 fixed_rows={'headers':True},
                 fixed_columns={'headers':True,'data':2},
                 style_table={'overlowX':'auto', 'minWidth':'100%'},
