@@ -53,7 +53,7 @@ dfr = player_stats.melt(id_vars=['season', 'display_name', 'position'],
        'receptions', 'targets', 'receiving_yards', 'receiving_tds',
        'receiving_yards_after_catch', 'fantasy_points', 'fantasy_points_ppr'])
  
-dash.register_page(__name__, name = 'Home', order = 0)
+dash.register_page(__name__, path='/')
 # app = Dash(__name__)
 # server = app.server
 
