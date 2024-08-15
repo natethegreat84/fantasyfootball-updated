@@ -226,7 +226,11 @@ def show_player_stats_from_plot(hoverData):
     dfs = dfs.sort_values('season')
 
     return dash_table.DataTable(data=dfs.to_dict('records'),
-                columns=[{'id': c, 'name': c} for c in dfs.columns]), player_name
+                columns=[{'id': c, 'name': c} for c in dfs.columns]
+                fixed_rows={'headers':True},
+                fixed_columns={'headers':True,'data':2},
+                style_table={'overlowX':'auto', 'minWidth':'100%'},
+                style_cells={'minWidth':'150px'}), player_name
                 
 @callback(
     Output('display-player-stats', 'children'),
@@ -238,7 +242,12 @@ def show_player_stats(player_name):
     df = df.sort_values('season')
 
     return dash_table.DataTable(data=df.to_dict('records'),
-                columns=[{'id': c, 'name': c} for c in df.columns])
+                columns=[{'id': c, 'name': c} for c in df.columns],
+                fixed_rows={'headers':True},
+                fixed_columns={'headers':True,'data':2},
+                style_table={'overlowX':'auto', 'minWidth':'100%'},
+                style_cells={'minWidth':'150px'}
+                )
 
 @callback(
     Output('x-time-series', 'figure'),
