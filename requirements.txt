@@ -2,6 +2,6 @@ dash>=2.14.0
 nfl_data_py
 pandas
 plotly.express
-numpy
+numpy==1.24.3
 dash_bootstrap_components
 gunicorn
