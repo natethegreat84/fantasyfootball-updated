@@ -1,0 +1,7 @@
+dash>=2.14.0
+nfl_data_py
+pandas
+plotly.express
+numpy
+dash_bootstrap_components
+gunicorn
