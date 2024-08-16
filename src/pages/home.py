@@ -53,7 +53,7 @@ dfr = player_stats.melt(id_vars=['season', 'display_name', 'position'],
        'receptions', 'targets', 'receiving_yards', 'receiving_tds',
        'receiving_yards_after_catch', 'fantasy_points', 'fantasy_points_ppr'])
  
-dash.register_page(__name__, path='/')
+dash.register_page(__name__, path='/', order=0)
 # app = Dash(__name__)
 # server = app.server
 
@@ -230,7 +230,7 @@ def show_player_stats_from_plot(hoverData):
                 fixed_rows={'headers':True},
                 fixed_columns={'headers':True,'data':2},
                 style_table={'overlowX':'auto', 'minWidth':'100%'},
-                style_cells={'minWidth':'150px'}), player_name
+                style_cell={'minWidth':'150px'}), player_name
                 
 @callback(
     Output('display-player-stats', 'children'),
@@ -246,7 +246,7 @@ def show_player_stats(player_name):
                 fixed_rows={'headers':True},
                 fixed_columns={'headers':True,'data':2},
                 style_table={'overlowX':'auto', 'minWidth':'100%'},
-                style_cells={'minWidth':'150px'}
+                style_cell={'minWidth':'150px'}
                 )
 
 @callback(
