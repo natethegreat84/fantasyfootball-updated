@@ -11,7 +11,7 @@ import nfl_data_py as nfl
 import dash_bootstrap_components as dbc
 
 # bring in nfl play data for the previous seasons
-pbp_rp = nfl.import_seasonal_data([2019,2020,2021,2022,2023])
+pbp_rp = nfl.import_seasonal_data([2019,2020,2021,2022,2023,2024])
 
 # filter down to use only needed stats
 player_stats = pbp_rp.filter(items=['player_id', 'season', 'games', 'completions', 'attempts',
