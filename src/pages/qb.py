@@ -11,7 +11,7 @@ import nfl_data_py as nfl
 import dash_bootstrap_components as dbc
 
 # bring in nfl play data for the previous seasons
-player_stats = nfl.import_weekly_data(years=[2019,2020,2021,2022,2023], columns=['player_display_name', 'position', 'season_type', 'season', 'week', 'recent_team', 'opponent_team'
+player_stats = nfl.import_weekly_data(years=[2019,2020,2021,2022,2023,2024], columns=['player_display_name', 'position', 'season_type', 'season', 'week', 'recent_team', 'opponent_team'
                                                                            , 'completions', 'attempts', 'passing_yards', 'passing_tds', 'interceptions', 'sacks', 'fantasy_points', 'fantasy_points_ppr'],
                                                                            downcast=True)
 
